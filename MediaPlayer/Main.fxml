@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchormain" prefHeight="475.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MediaPlayer.MainController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="55.0" prefHeight="142.0" prefWidth="658.0">
+         <font>
+            <Font name="Viner Hand ITC" size="67.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="imageView" fitHeight="139.0" fitWidth="316.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Label>
+      <Label fx:id="title" alignment="CENTER" layoutX="-1.0" layoutY="188.0" prefHeight="34.0" prefWidth="659.0" text="Your Daily Use Media Player">
+         <font>
+            <Font name="Viner Hand ITC" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="V" layoutX="233.0" layoutY="364.0" mnemonicParsing="false" onAction="#PlayVideo" prefHeight="50.0" prefWidth="190.0" text="VIDEO">
+         <font>
+            <Font name="Bauhaus 93" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="A" layoutX="233.0" layoutY="303.0" mnemonicParsing="false" onAction="#PlayAudio" prefHeight="50.0" prefWidth="190.0" text="AUDIO">
+         <font>
+            <Font name="Bauhaus 93" size="26.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

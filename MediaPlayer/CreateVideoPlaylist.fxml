@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="659.5" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MediaPlayer.CreateVideoPlaylistController">
+    <center>
+        <ListView fx:id="listView" prefHeight="300.0" prefWidth="732.0" BorderPane.alignment="CENTER" />
+    </center>
+    <top>
+        <MenuBar fx:id="myMenuBar" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Add File to Playlist">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#AddFile2" text="Add a File" />
+                        <MenuItem mnemonicParsing="false" onAction="#AddFiles2" text="Add Multiple Files" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Delete File from Playlist">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#DeleteFile" text="Delete the Selected Files" />
+                        <MenuItem mnemonicParsing="false" onAction="#DeleteAll" text="Delete All Files" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Back">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#Back" text="Go Back" />
+                  <MenuItem mnemonicParsing="false" onAction="#ToMenu" text="Go to Main Menu" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="TOP_RIGHT" prefHeight="73.0" prefWidth="114.0">
+                    <children>
+                        <Label fx:id="labelname" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="130.0" text="Playlist Name :" textAlignment="CENTER">
+                            <font>
+                                <Font name="Bauhaus 93" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelname1" prefHeight="17.0" prefWidth="130.0" text="(Should not start with digits)">
+                            <font>
+                                <Font name="System Bold Italic" size="9.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="86.0" prefWidth="526.0">
+                    <children>
+                        <TextField fx:id="text" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="518.0">
+                            <font>
+                                <Font name="Arial Bold" size="14.0" />
+                            </font></TextField>
+                        <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Create" prefHeight="28.0" prefWidth="294.0" text="CREATE">
+                            <font>
+                                <Font name="Bauhaus 93" size="15.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

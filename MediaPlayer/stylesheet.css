@@ -1,0 +1,88 @@
+.root{
+    -fx-background-color: #00004d;
+    -fx-background-size: cover;
+    -fx-font-family: "Bauhaus 93";
+}
+
+#anchormain{
+    -fx-background-image: url("resources/shade2.jpg");
+}
+
+#title{
+    -fx-text-fill: white;
+}
+
+#label{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+}
+
+.list-view{
+    -fx-background-color: #ffeecc;
+    -fx-background-image: url("resources/shade5.jpg");
+    -fx-background-size: cover;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 11;
+}
+
+.button{
+    -fx-background-color: #e7830f;
+}
+
+.button:hover{
+    -fx-background-color: #f4ab57;
+}
+
+.menu{
+    -fx-font-family: "Gill Sans MT";
+    -fx-font-weight: bold;
+}
+
+.menu:hover, .menu:showing, .menu-item:hover, .menu-item:focused{
+    -fx-background-color: #e7830f;
+}
+
+#labelname, #labelname1{
+    -fx-text-fill: #e7830f;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #ffc34d;
+    -fx-text-fill: white;
+}
+
+.list-cell:even {
+    -fx-background-color: #fff7e6;
+}
+
+.list-cell:odd {
+    -fx-background-color: #ffeecc;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #ffffff;
+}
+
+#pane{
+     -fx-background-color: white;
+     -fx-background-image: url("resources/shade5.jpg");
+     -fx-background-size: cover;
+}
+
+#pane1{
+    -fx-background-color: #00004d;
+}
+
+#EqLabel{
+    -fx-background-color: #00004d;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+
+#totalTime{
+    -fx-font-family: "Gill Sans MT";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}

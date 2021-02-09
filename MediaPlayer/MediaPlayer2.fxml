@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane prefHeight="475.0" prefWidth="659.2" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MediaPlayer.MediaPlayer2Controller">
+    <center>
+        <StackPane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="659.0" BorderPane.alignment="CENTER">
+            <children>
+                <MediaView fx:id="mediaView" fitHeight="${pane.height}" fitWidth="${pane.width}" preserveRatio="false" StackPane.alignment="CENTER">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin></MediaView>
+            </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="70.0" />
+         </padding>
+        </StackPane>
+    </center>
+    <top>
+        <MenuBar fx:id="myMenuBar" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OpenFileMethod" text="Open File" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Playback">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#playVideo" text="Play" />
+                        <MenuItem mnemonicParsing="false" onAction="#pauseVideo" text="Pause" />
+                        <MenuItem mnemonicParsing="false" onAction="#stopVideo" text="Stop" />
+                        <MenuItem mnemonicParsing="false" onAction="#skip5" text="Jump Forward" />
+                        <MenuItem mnemonicParsing="false" onAction="#back5" text="Jump Backward" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Audio">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#IncreaseVolume" text="Increase Volume" />
+                        <MenuItem mnemonicParsing="false" onAction="#DecreaseVolume" text="Decrease Volume" />
+                        <MenuItem mnemonicParsing="false" onAction="#Mute" text="Mute" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Playlist">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#createVideoPlaylist" text="Create Playlist" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewVideoPlaylists" text="My Playlists" />
+                    </items>
+                </Menu>
+            <Menu mnemonicParsing="false" text="Back">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Back" text="Go Back" />
+              </items>
+            </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   <bottom>
+          <VBox fx:id="space" alignment="TOP_CENTER" maxHeight="108.0" prefHeight="72.0" prefWidth="659.0" BorderPane.alignment="CENTER">
+              <children>
+                  <Slider fx:id="progressBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" prefWidth="659.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></Slider>
+            <Label fx:id="totalTime" alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="18.0" prefWidth="659.0" />
+                  <HBox alignment="CENTER" maxHeight="71.0" prefHeight="41.0" prefWidth="659.0">
+                      <children>
+                          <Button fx:id="openFile" mnemonicParsing="false" onAction="#OpenFileMethod" text="OpenFile">
+                              <HBox.margin>
+                                  <Insets bottom="7.0" right="7.0" />
+                              </HBox.margin>
+                          </Button>
+                          <Button mnemonicParsing="false" onAction="#playVideo" text="Play">
+                              <HBox.margin>
+                                  <Insets bottom="7.0" right="7.0" />
+                              </HBox.margin>
+                          </Button>
+                          <Button mnemonicParsing="false" onAction="#pauseVideo" text="Pause">
+                              <HBox.margin>
+                                  <Insets bottom="7.0" right="7.0" />
+                              </HBox.margin>
+                          </Button>
+                          <Button mnemonicParsing="false" onAction="#stopVideo" text="Stop">
+                              <HBox.margin>
+                                  <Insets bottom="7.0" right="7.0" />
+                              </HBox.margin>
+                          </Button>
+                  <Button fx:id="RepeatButton" mnemonicParsing="false" onAction="#RepeatFunction" text="Loop">
+                     <HBox.margin>
+                        <Insets bottom="7.0" right="7.0" />
+                     </HBox.margin>
+                  </Button>
+                          <Button mnemonicParsing="false" onAction="#furtherSlowDownAudio" text="&lt;&lt;&lt;">
+                              <HBox.margin>
+                                  <Insets bottom="7.0" right="7.0" />
+                              </HBox.margin>
+                          </Button>
+                          <Button mnemonicParsing="false" onAction="#back5" text="-5s">
+                              <HBox.margin>
+                                  <Insets bottom="7.0" right="7.0" />
+                              </HBox.margin>
+                          </Button>
+                          <Button mnemonicParsing="false" onAction="#skip5" text="+5s">
+                              <HBox.margin>
+                                  <Insets bottom="7.0" right="7.0" />
+                              </HBox.margin>
+                          </Button>
+                          <Button mnemonicParsing="false" onAction="#furtherSpeedUpAudio" text="&gt;&gt;&gt;">
+                              <HBox.margin>
+                                  <Insets bottom="7.0" right="7.0" />
+                              </HBox.margin>
+                          </Button>
+                          <Slider fx:id="volumeSlider">
+                              <HBox.margin>
+                                  <Insets bottom="10.0" left="25.0" />
+                              </HBox.margin>
+                          </Slider>
+                      </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                  </HBox>
+              </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+          </VBox>
+   </bottom>
+</BorderPane>
